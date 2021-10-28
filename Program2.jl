@@ -49,7 +49,7 @@ for i in 1:length(player_data)
     #println(names[i][2], ", ", names[i][1],  " ", averages[i], " ", slugging_percent[i], " ", OBP[i], " ", OPS[i])
 end
 
-println("BASEBALL TEAM REPORT --- ", length(batters), " PLAYERS FOUND IN FILE")
+println("BASEBALL TEAM REPORT --- ", length(player_data), " PLAYERS FOUND IN FILE")
 println("   PLAYER NAME     :   AVERAGE     SLUGGING    ONBASE%     OPS")
 println("--------------------------------------------------------------------")
 # Sort by OPS
