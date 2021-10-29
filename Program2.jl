@@ -13,6 +13,7 @@ using Printf
 
 
 function print_teams(outputs)
+    # Print out the team statistics by OPS and Batting Average
     println("Baseball Team Summary:     ", length(outputs), " players found in file.\n\n")
 
     println("Players Sorted by OPS:\n\n")
@@ -26,8 +27,6 @@ function print_teams(outputs)
         print("\n")
     end
     println("------------------------------------------------------------")
-
-
     println("\n\nPlayers Sorted by Batting Average:\n\n")
     println("     PLAYER NAME     :     AVERAGE  SLUGGING  ONBASE%   OPS")
     println("------------------------------------------------------------")
@@ -43,6 +42,8 @@ end
 
 
 function read_file(filename)
+    # Read in the player file and calculate statistics from variables
+
     # Declare variable lists
     names = []
     plate_appearances = []
@@ -84,6 +85,7 @@ function read_file(filename)
         push!(OBP, (hitByPitch[i] + walks[i] + singles[i] + doubles[i] + triples[i] + homeruns[i]) / plate_appearances[i])
         push!(OPS, (slugging_percent[i] + OBP[i]))
     end
+    # Initialize the output statistics array
     for i in 1:length(player_data)
         push!(outputs, [names[i][2], names[i][1], averages[i], slugging_percent[i], OBP[i], OPS[i]])
     end
@@ -93,6 +95,7 @@ end
 
 
 function main()
+    # Driver function to kick off calculations
     println("Starting new program\n")
     outputs = read_file("C://Users//ian//Desktop//Courses//CS 424//playerInfo.txt")
     print_teams(outputs)
