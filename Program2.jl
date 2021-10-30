@@ -1,5 +1,5 @@
 # Written by Amber Lai Hipp and Ian McNichols
-# File Name: Project2.jl
+# File Name: Program2.jl
 # Programming Assignment 2
 # CS 424-01
 # October 28, 2021
