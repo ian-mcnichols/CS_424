@@ -29,7 +29,7 @@ function print_team_report(player_outputs, sort_value, sort_category)
 end
 
 # Get filename from user, read file, and calculate statistics from variables.
-function read_file()
+function run_stats()
     # Declare variable lists
     names = []
     plate_appearances = []
@@ -56,7 +56,6 @@ function read_file()
     # Read in players from file line-by-line
     try
         myfile = open(filename)
-
     catch err
         println("\nUnable to open the file: $filename")
 	    println("Exiting the program\n")
@@ -108,7 +107,7 @@ function main()
 		"calculate the averages for each player, and then print out two reports.")
     
     # Read file and get list of players and statistics
-    player_outputs = read_file()
+    player_outputs = run_stats()
 
     # Print report sorted by OPS
     print_team_report(player_outputs, 6, "OPS")
