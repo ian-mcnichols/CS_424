@@ -14,3 +14,5 @@ countValues(_, [], 0).
 countValues(A, [H|T], Out) :- dif(A,H), countValues(A, T, Out).
 countValues(A, [H|T], Out) :- A = H, countValues(A, T, Out1), Out is Out1 + 1.
 
+not_disjoint(A, B) :- member(X,A), member(X,B).
+disjoint(A, B) :- not(not_disjoint(A, B)).
