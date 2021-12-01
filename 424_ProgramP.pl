@@ -1,3 +1,7 @@
+% Ian McNichols
+% CS 424
+% The following is my own work from my brain
+
 a(X) :- X > 89, X < 101.
 b(X) :- X > 79, X < 90.
 c(X) :- X > 69, X < 80.
